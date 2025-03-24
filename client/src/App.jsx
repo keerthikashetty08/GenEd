@@ -1,18 +1,20 @@
-import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Topicpage from './pages/topicpage';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div id='root'>
-        <h1>Running...</h1>
+      <div id="root">
+        <Routes>
+          <Route path="/" element={<Topicpage />} />
+        </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
